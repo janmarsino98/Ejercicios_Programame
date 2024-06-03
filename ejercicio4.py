@@ -1,41 +1,23 @@
-entrada = """10
-300 Fuera de juego de Russo
-1749 Gol de Olga Carmona
-2241 Disparo a puerta de Alba Redondo
-2791 Sale Alessia Ruso
-2791 Entra Lauren James
-3076 Saque de esquina
-3333 Tarjeta amarilla para Lauren Hemp
-5433 Sale Mariona Caldentey
-5433 Entra Alexia Putellas
-6327 Fin del partido
-3
-1
-5
-7"""
+#Suma de Subarrays Contiguos:
+
+#  Dado un array de enteros y un entero k, 
+#  escribe una función que encuentre la suma 
+#  máxima de cualquier subarray contiguo de 
+#  longitud k.
+
+l = [1,2,3,4,2,2,4,4,5,9,2,1,1]
+
+k = 3
+
+start = 0
+end = 3
+max_sum = 0
+
+while end != len(l):
+    curr_sum = sum(l[start:end+1])
+    max_sum = max(max_sum, curr_sum)
+    end += 1
+    start += 1
+    print(max_sum)
 
 
-lineas = entrada.split("\n")
-
-casos = int(lineas[0])
-
-eventos = lineas[1:casos+1]
-
-consultas_n = int(lineas[casos+1])
-
-consultas = list(map(int,lineas[-consultas_n:]))
-
-timings = []
-
-for evento in eventos:
-    timings.append(int(evento.split(" ")[0]))
-    
-def consultar(consulta):
-    inicio = 0
-    final = 0
-    min_time = 1000
-    curr_events = 0
-    last_time = timings[0]
-    while final 
-         
-        
